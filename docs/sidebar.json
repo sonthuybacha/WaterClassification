@@ -1,6 +1,8 @@
 {
   "WaterClassification": {
     "Overview": "/",
-    "core": "/core"
+    "core": "/core",
+    "Loading Reflectances from CSV": "/Reflectances_1",
+    "Exploratory Data Analysis": "/Reflectances_2"
   }
 }
