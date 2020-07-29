@@ -378,7 +378,7 @@ sidebar: home_sidebar
       <td>995</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>12_Rio SF_Morpará_1S</td>
+      <td>12_Rio SF_MorparÃ¡_1S</td>
       <td>NaN</td>
       <td>210.3</td>
       <td>0.012073</td>
@@ -402,7 +402,7 @@ sidebar: home_sidebar
       <td>996</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>12_Rio SF_Morpará_2S</td>
+      <td>12_Rio SF_MorparÃ¡_2S</td>
       <td>NaN</td>
       <td>171.0</td>
       <td>0.012753</td>
@@ -426,7 +426,7 @@ sidebar: home_sidebar
       <td>997</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>12_Rio SF_Morpará_3S</td>
+      <td>12_Rio SF_MorparÃ¡_3S</td>
       <td>NaN</td>
       <td>165.7</td>
       <td>0.011985</td>
@@ -447,7 +447,7 @@ sidebar: home_sidebar
     </tr>
   </tbody>
 </table>
-<p>997 rows × 639 columns</p>
+<p>997 rows Ã— 639 columns</p>
 </div>
 </div>
 
@@ -757,7 +757,7 @@ sidebar: home_sidebar
       <td>995</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>12_Rio SF_Morpará_1S</td>
+      <td>12_Rio SF_MorparÃ¡_1S</td>
       <td>NaN</td>
       <td>210.3</td>
       <td>0.012073</td>
@@ -781,7 +781,7 @@ sidebar: home_sidebar
       <td>996</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>12_Rio SF_Morpará_2S</td>
+      <td>12_Rio SF_MorparÃ¡_2S</td>
       <td>NaN</td>
       <td>171.0</td>
       <td>0.012753</td>
@@ -805,7 +805,7 @@ sidebar: home_sidebar
       <td>997</td>
       <td>NaN</td>
       <td>NaN</td>
-      <td>12_Rio SF_Morpará_3S</td>
+      <td>12_Rio SF_MorparÃ¡_3S</td>
       <td>NaN</td>
       <td>165.7</td>
       <td>0.011985</td>
@@ -826,7 +826,7 @@ sidebar: home_sidebar
     </tr>
   </tbody>
 </table>
-<p>989 rows × 639 columns</p>
+<p>989 rows Ã— 639 columns</p>
 </div>
 </div>
 
@@ -1114,7 +1114,7 @@ sidebar: home_sidebar
       <td>995</td>
       <td>0</td>
       <td>0</td>
-      <td>12_Rio SF_Morpará_1S</td>
+      <td>12_Rio SF_MorparÃ¡_1S</td>
       <td>0</td>
       <td>210.3</td>
       <td>0.007578</td>
@@ -1138,7 +1138,7 @@ sidebar: home_sidebar
       <td>996</td>
       <td>0</td>
       <td>0</td>
-      <td>12_Rio SF_Morpará_2S</td>
+      <td>12_Rio SF_MorparÃ¡_2S</td>
       <td>0</td>
       <td>171.0</td>
       <td>0.008169</td>
@@ -1162,7 +1162,7 @@ sidebar: home_sidebar
       <td>997</td>
       <td>0</td>
       <td>0</td>
-      <td>12_Rio SF_Morpará_3S</td>
+      <td>12_Rio SF_MorparÃ¡_3S</td>
       <td>0</td>
       <td>165.7</td>
       <td>0.007647</td>
@@ -1183,7 +1183,7 @@ sidebar: home_sidebar
     </tr>
   </tbody>
 </table>
-<p>989 rows × 581 columns</p>
+<p>989 rows Ã— 581 columns</p>
 </div>
 </div>
 
@@ -1538,7 +1538,7 @@ sidebar: home_sidebar
     </tr>
   </tbody>
 </table>
-<p>989 rows × 577 columns</p>
+<p>989 rows Ã— 577 columns</p>
 </div>
 </div>
 
@@ -2151,7 +2151,7 @@ if (outputEl) {{
     </tr>
   </tbody>
 </table>
-<p>18 rows × 577 columns</p>
+<p>18 rows Ã— 577 columns</p>
 </div>
 </div>
 
@@ -2425,6 +2425,71 @@ if (outputEl) {{
 </div>
 </div>
 </div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;a Ã¡&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;str&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>b&#39;a \xc3\xa1&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
