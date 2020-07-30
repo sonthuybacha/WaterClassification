@@ -3,6 +3,8 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"showfig": "00_core.ipynb",
+         "calc_df_grouped_stats": "00_core.ipynb",
+         "series_to_annotation": "00_core.ipynb",
          "HelloSayer": "00_core.ipynb"}
 
 modules = ["core.py"]

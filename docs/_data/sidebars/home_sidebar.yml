@@ -16,7 +16,7 @@ entries:
       title: Loading Reflectances from CSV
       url: /Reflectances_1
     - output: web,pdf
-      title: Exploratory Data Analysis
+      title: Exploratory Data Analysis - 1
       url: /Reflectances_2
     output: web
     title: WaterClassification
