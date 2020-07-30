@@ -55,4 +55,4 @@ class HelloSayer:
     def say(self):
         "Default method to say something"
         print(self.to)
-        say_hello(self.to)
+#         say_hello(self.to)
