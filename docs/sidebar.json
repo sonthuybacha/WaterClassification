@@ -3,7 +3,7 @@
     "Overview": "/",
     "core": "/core",
     "Exploratory Data Analysis": "/EDA",
-    "Loading Reflectances from CSV": "/Reflectances_1",
-    "Exploratory Data Analysis - 1": "/Reflectances_2"
+    "Unnormalized spectra analysis": "/Unnormalized_analysis",
+    "Loading Reflectances from CSV": "/Reflectances_1"
   }
 }
