@@ -13,6 +13,9 @@ entries:
       title: core
       url: /core
     - output: web,pdf
+      title: Exploratory Data Analysis
+      url: /EDA
+    - output: web,pdf
       title: Loading Reflectances from CSV
       url: /Reflectances_1
     - output: web,pdf

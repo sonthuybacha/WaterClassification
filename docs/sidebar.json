@@ -2,6 +2,7 @@
   "WaterClassification": {
     "Overview": "/",
     "core": "/core",
+    "Exploratory Data Analysis": "/EDA",
     "Loading Reflectances from CSV": "/Reflectances_1",
     "Exploratory Data Analysis - 1": "/Reflectances_2"
   }
