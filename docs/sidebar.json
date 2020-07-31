@@ -4,6 +4,7 @@
     "core": "/core",
     "Exploratory Data Analysis": "/EDA",
     "Unnormalized spectra analysis": "/Unnormalized_analysis",
+    "Normalized spectra analysis": "/Normalized_analysis",
     "Loading Reflectances from CSV": "/Reflectances_1"
   }
 }

@@ -19,6 +19,9 @@ entries:
       title: Unnormalized spectra analysis
       url: /Unnormalized_analysis
     - output: web,pdf
+      title: Normalized spectra analysis
+      url: /Normalized_analysis
+    - output: web,pdf
       title: Loading Reflectances from CSV
       url: /Reflectances_1
     output: web
