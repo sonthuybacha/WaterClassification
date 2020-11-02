@@ -13,14 +13,33 @@ entries:
       title: core
       url: /core
     - output: web,pdf
+      title: Data Preparation
+      url: /Data_Preparation
+    - output: web,pdf
       title: Exploratory Data Analysis
       url: /EDA
     - output: web,pdf
       title: Unnormalized spectra analysis
       url: /Unnormalized_analysis
     - output: web,pdf
+      title: Normalized + Brightness spectra analysis
+      url: /Normalized_Bright_analysis
+    - output: web,pdf
       title: Normalized spectra analysis
       url: /Normalized_analysis
+    - output: web,pdf
+      title: SPM Analysis
+      url: /SPM_Analysis-unnorm_cluster
+    - output: web,pdf
+      title: Random Forests Analysis
+      url: /Random_Forests
+    - output: web,pdf
+      title: Clustering assessment
+      url: /10-AutoEncoder
+    - output: web,pdf
+      title: This notebook implements a Variational Auto Encoder (VAE) using Fastai
+        library
+      url: /11-VAE
     - output: web,pdf
       title: Loading Reflectances from CSV
       url: /Reflectances_1
