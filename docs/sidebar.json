@@ -5,12 +5,18 @@
     "Data Preparation": "/Data_Preparation",
     "Exploratory Data Analysis": "/EDA",
     "Unnormalized spectra analysis": "/Unnormalized_analysis",
-    "Normalized + Brightness spectra analysis": "/Normalized_Bright_analysis",
+    "Normalized and Brightness spectra analysis": "/Normalized_Bright_analysis",
     "Normalized spectra analysis": "/Normalized_analysis",
+    "SPM 2 Analysis": "/SPM_Analysis-Norm_cluster",
     "SPM Analysis": "/SPM_Analysis-unnorm_cluster",
+    "Random Forests Analysis 2": "/Random_Forests-Norm",
     "Random Forests Analysis": "/Random_Forests",
-    "Clustering assessment": "/10-AutoEncoder",
-    "This notebook implements a Variational Auto Encoder (VAE) using Fastai library": "/11-VAE",
+    "Clustering assessment": "/Clustering_assessment",
+    "Clustering assessment 2": "/Norm-Clustering_assessment",
+    "Clustering assessment 4": "/Clustering_assessment-norm",
+    "Clustering assessment 3": "/Clustering_assessment-Copy1",
+    "Auto Encoder": "/10-AutoEncoder",
+    "Variational Auto Encoder (VAE)": "/11-VAE",
     "Loading Reflectances from CSV": "/Reflectances_1"
   }
 }
