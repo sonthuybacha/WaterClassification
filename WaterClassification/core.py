@@ -23,8 +23,9 @@ from IPython.core.display import display, HTML
 import pdb
 
 # Cell
-def wavelength_range(ini_wl, last_wl):
-    return [f'{wl}' for wl in range(ini_wl, last_wl+1)]
+def wavelength_range(ini_wl, last_wl, step=1):
+    "Creates a range of wavelengths from initial to last, in a defined nanometers step."
+    return [f'{wl}' for wl in range(ini_wl, last_wl+1, step)]
 
 
 # Cell

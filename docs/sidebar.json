@@ -2,9 +2,15 @@
   "WaterClassification": {
     "Overview": "/",
     "core": "/core",
+    "Data Preparation": "/Data_Preparation",
     "Exploratory Data Analysis": "/EDA",
     "Unnormalized spectra analysis": "/Unnormalized_analysis",
+    "Normalized + Brightness spectra analysis": "/Normalized_Bright_analysis",
     "Normalized spectra analysis": "/Normalized_analysis",
+    "SPM Analysis": "/SPM_Analysis-unnorm_cluster",
+    "Random Forests Analysis": "/Random_Forests",
+    "Clustering assessment": "/10-AutoEncoder",
+    "This notebook implements a Variational Auto Encoder (VAE) using Fastai library": "/11-VAE",
     "Loading Reflectances from CSV": "/Reflectances_1"
   }
 }
