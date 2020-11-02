@@ -24,7 +24,11 @@ index = {"wavelength_range": "00_core.ipynb",
          "get_bad_measurements": "00_Data_Preparation.ipynb",
          "get_missing_values": "00_Data_Preparation.ipynb",
          "get_negative_values": "00_Data_Preparation.ipynb",
-         "keep_columns": "00_Data_Preparation.ipynb"}
+         "get_basins_by_measurements": "00_Data_Preparation.ipynb",
+         "filter_basin": "00_Data_Preparation.ipynb",
+         "filter_ids": "00_Data_Preparation.ipynb",
+         "keep_columns": "00_Data_Preparation.ipynb",
+         "load_and_clean": "00_Data_Preparation.ipynb"}
 
 modules = ["core.py",
            "cleaning.py"]

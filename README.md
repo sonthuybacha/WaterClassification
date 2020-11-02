@@ -13,6 +13,18 @@
 This is an example of the `wavelength_range` function, that returns a list of wavelengths given initial, final and step values, specified in nanometers(nm)
 
 ```python
+showdoc.show_doc(wavelength_range)
+```
+
+
+<h4 id="wavelength_range" class="doc_header"><code>wavelength_range</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L26" class="source_link" style="float:right">[source]</a></h4>
+
+> <code>wavelength_range</code>(**`ini_wl`**, **`last_wl`**)
+
+
+
+
+```python
 wavelength_range(340, 350)
 ```
 
