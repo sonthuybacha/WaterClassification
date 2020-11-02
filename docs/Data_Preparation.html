@@ -194,7 +194,7 @@ Those inconsistencies and respective Ids will be detailed bellow:</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="delete_rows" class="doc_header"><code>delete_rows</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L6" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>delete_rows</code>(<strong><code>df</code></strong>, <strong><code>ids</code></strong>)</p>
+<h4 id="delete_rows" class="doc_header"><code>delete_rows</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L7" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>delete_rows</code>(<strong><code>df</code></strong>, <strong><code>ids</code></strong>)</p>
 </blockquote>
 <p>This function cleans the informed ids from the dataframe</p>
 
@@ -219,7 +219,7 @@ Those inconsistencies and respective Ids will be detailed bellow:</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="show_rows" class="doc_header"><code>show_rows</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L10" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>show_rows</code>(<strong><code>df</code></strong>, <strong><code>ids</code></strong>, <strong><code>columns</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="show_rows" class="doc_header"><code>show_rows</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L11" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>show_rows</code>(<strong><code>df</code></strong>, <strong><code>ids</code></strong>, <strong><code>columns</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>This function shows only the rows with the informed ids</p>
 
@@ -243,17 +243,29 @@ Those inconsistencies and respective Ids will be detailed bellow:</p>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_bad_measurements</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">bad_flags</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;não rodou&#39;</span><span class="p">,</span> <span class="s1">&#39;ruim&#39;</span><span class="p">],</span> <span class="n">flag_col</span><span class="o">=</span><span class="s1">&#39;320&#39;</span><span class="p">):</span>
-    <span class="s2">&quot;Cleans the rows in dataframe df that contains the bad_flags&quot;</span>
+</div>
+    {% endraw %}
+
+    {% raw %}
     
-    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="n">flag_col</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">bad_flags</span><span class="p">)][</span><span class="s1">&#39;Id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
-</pre></div>
+<div class="cell border-box-sizing code_cell rendered">
 
-    </div>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="get_bad_measurements" class="doc_header"><code>get_bad_measurements</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_bad_measurements</code>(<strong><code>df</code></strong>, <strong><code>bad_flags</code></strong>=<em><code>['não rodou', 'ruim']</code></em>, <strong><code>flag_col</code></strong>=<em><code>'320'</code></em>)</p>
+</blockquote>
+<p>Cleans the rows in dataframe df that contains the bad_flags</p>
+
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -482,7 +494,7 @@ Those inconsistencies and respective Ids will be detailed bellow:</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_missing_values" class="doc_header"><code>get_missing_values</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L16" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_missing_values</code>(<strong><code>df</code></strong>, <strong><code>columns</code></strong>)</p>
+<h4 id="get_missing_values" class="doc_header"><code>get_missing_values</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L23" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_missing_values</code>(<strong><code>df</code></strong>, <strong><code>columns</code></strong>)</p>
 </blockquote>
 <p>Get rows with missing values in a specified range of wavelengths</p>
 
@@ -593,7 +605,7 @@ Those inconsistencies and respective Ids will be detailed bellow:</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_negative_values" class="doc_header"><code>get_negative_values</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L26" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_negative_values</code>(<strong><code>df</code></strong>, <strong><code>columns</code></strong>)</p>
+<h4 id="get_negative_values" class="doc_header"><code>get_negative_values</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L33" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_negative_values</code>(<strong><code>df</code></strong>, <strong><code>columns</code></strong>)</p>
 </blockquote>
 <p>Get rows with negative values in the specified columns. NaN will be considered negative.</p>
 
@@ -683,7 +695,7 @@ The following function mantains only the desired columns within a dataframe.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="keep_columns" class="doc_header"><code>keep_columns</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L34" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>keep_columns</code>(<strong><code>df</code></strong>, <strong><code>wanted_columns</code></strong>)</p>
+<h4 id="keep_columns" class="doc_header"><code>keep_columns</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/cleaning.py#L41" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>keep_columns</code>(<strong><code>df</code></strong>, <strong><code>wanted_columns</code></strong>)</p>
 </blockquote>
 <p>Keeps the wanted_columns and drop the rest.</p>
 

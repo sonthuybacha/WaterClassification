@@ -2,11 +2,32 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"showfig": "00_core.ipynb",
+index = {"wavelength_range": "00_core.ipynb",
+         "showfig": "00_core.ipynb",
+         "log_color_scatter": "00_core.ipynb",
+         "series_to_annotation": "00_core.ipynb",
+         "PCA_decomposition": "00_core.ipynb",
+         "clusterize": "00_core.ipynb",
          "calc_df_grouped_stats": "00_core.ipynb",
-         "series_to_annotation": "00_core.ipynb"}
+         "nir_red_ratio": "00_core.ipynb",
+         "linear": "00_core.ipynb",
+         "expo": "00_core.ipynb",
+         "power": "00_core.ipynb",
+         "poly": "00_core.ipynb",
+         "nechad": "00_core.ipynb",
+         "fit_curve": "00_core.ipynb",
+         "calc_errors": "00_core.ipynb",
+         "plot_data_and_curve": "00_core.ipynb",
+         "fit_and_plot_curve": "00_core.ipynb",
+         "delete_rows": "00_Data_Preparation.ipynb",
+         "show_rows": "00_Data_Preparation.ipynb",
+         "get_bad_measurements": "00_Data_Preparation.ipynb",
+         "get_missing_values": "00_Data_Preparation.ipynb",
+         "get_negative_values": "00_Data_Preparation.ipynb",
+         "keep_columns": "00_Data_Preparation.ipynb"}
 
-modules = ["core.py"]
+modules = ["core.py",
+           "cleaning.py"]
 
 doc_url = "https://cordmaur.github.io/WaterClassification/"
 
