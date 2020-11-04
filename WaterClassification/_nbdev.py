@@ -2,10 +2,16 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"wavelength_range": "00_core.ipynb",
+index = {"save_obj": "00_core.ipynb",
+         "load_obj": "00_core.ipynb",
+         "wavelength_range": "00_core.ipynb",
+         "calc_area": "00_core.ipynb",
+         "normalize": "00_core.ipynb",
          "showfig": "00_core.ipynb",
          "log_color_scatter": "00_core.ipynb",
          "series_to_annotation": "00_core.ipynb",
+         "cluster_and_plot_scatter": "00_core.ipynb",
+         "multi_cluster_and_plot": "00_core.ipynb",
          "PCA_decomposition": "00_core.ipynb",
          "clusterize": "00_core.ipynb",
          "calc_df_grouped_stats": "00_core.ipynb",
@@ -28,10 +34,16 @@ index = {"wavelength_range": "00_core.ipynb",
          "filter_basin": "00_Data_Preparation.ipynb",
          "filter_ids": "00_Data_Preparation.ipynb",
          "keep_columns": "00_Data_Preparation.ipynb",
-         "load_and_clean": "00_Data_Preparation.ipynb"}
+         "resample": "00_Data_Preparation.ipynb",
+         "load_and_clean": "00_Data_Preparation.ipynb",
+         "Fit": "00_Fitting.ipynb",
+         "MultiFit": "00_Fitting.ipynb",
+         "GroupFit": "00_Fitting.ipynb"}
 
 modules = ["core.py",
-           "cleaning.py"]
+           "cleaning.py",
+           "fitting.py",
+           "None.py"]
 
 doc_url = "https://cordmaur.github.io/WaterClassification/"
 

@@ -2,6 +2,12 @@
 > The objective of this project is to provide a water color classification based on remote sensed images
 
 
+```python
+#export
+from WaterClassification.core import *
+from nbdev.showdoc import *
+```
+
 ## Data Preparation
 > All the processes for cleaning the raw data are defined and explained in the [Data_Preparation](https://cordmaur.github.io/WaterClassification/Data_Preparation/) documentation
 
@@ -13,15 +19,15 @@
 This is an example of the `wavelength_range` function, that returns a list of wavelengths given initial, final and step values, specified in nanometers(nm)
 
 ```python
-showdoc.show_doc(wavelength_range)
+show_doc(wavelength_range)
 ```
 
 
-<h4 id="wavelength_range" class="doc_header"><code>wavelength_range</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L26" class="source_link" style="float:right">[source]</a></h4>
+<h4 id="wavelength_range" class="doc_header"><code>wavelength_range</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L37" class="source_link" style="float:right">[source]</a></h4>
 
-> <code>wavelength_range</code>(**`ini_wl`**, **`last_wl`**)
+> <code>wavelength_range</code>(**`ini_wl`**, **`last_wl`**, **`step`**=*`1`*)
 
-
+Creates a range of wavelengths from initial to last, in a defined nanometers step.
 
 
 ```python

@@ -16,8 +16,17 @@ entries:
       title: Data Preparation
       url: /Data_Preparation
     - output: web,pdf
-      title: Exploratory Data Analysis
+      title: Exploratory Data Analysis (EDA)
       url: /EDA
+    - output: web,pdf
+      title: Fitting Funcs
+      url: /Fitting
+    - output: web,pdf
+      title: Clustering Analysis
+      url: /Clustering_Analysis
+    - output: web,pdf
+      title: Clustering assessment
+      url: /Clustering_assessment-Copy1
     - output: web,pdf
       title: Unnormalized spectra analysis
       url: /Unnormalized_analysis
@@ -40,17 +49,11 @@ entries:
       title: Random Forests Analysis
       url: /Random_Forests
     - output: web,pdf
-      title: Clustering assessment
-      url: /Clustering_assessment
-    - output: web,pdf
       title: Clustering assessment 2
       url: /Norm-Clustering_assessment
     - output: web,pdf
       title: Clustering assessment 4
       url: /Clustering_assessment-norm
-    - output: web,pdf
-      title: Clustering assessment 3
-      url: /Clustering_assessment-Copy1
     - output: web,pdf
       title: Auto Encoder
       url: /10-AutoEncoder

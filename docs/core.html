@@ -34,6 +34,30 @@ description: "This notebook has the Core functions for the Water Classification 
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="save_obj" class="doc_header"><code>save_obj</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L30" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>save_obj</code>(<strong><code>obj</code></strong>, <strong><code>name</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Util">Util<a class="anchor-link" href="#Util"> </a></h2>
@@ -58,9 +82,83 @@ description: "This notebook has the Core functions for the Water Classification 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="wavelength_range" class="doc_header"><code>wavelength_range</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L26" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>wavelength_range</code>(<strong><code>ini_wl</code></strong>, <strong><code>last_wl</code></strong>, <strong><code>step</code></strong>=<em><code>1</code></em>)</p>
+<h4 id="load_obj" class="doc_header"><code>load_obj</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L34" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>load_obj</code>(<strong><code>name</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="wavelength_range" class="doc_header"><code>wavelength_range</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L37" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>wavelength_range</code>(<strong><code>ini_wl</code></strong>, <strong><code>last_wl</code></strong>, <strong><code>step</code></strong>=<em><code>1</code></em>)</p>
 </blockquote>
 <p>Creates a range of wavelengths from initial to last, in a defined nanometers step.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="calc_area" class="doc_header"><code>calc_area</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L41" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calc_area</code>(<strong><code>df</code></strong>, <strong><code>bands</code></strong>=<em><code>None</code></em>, <strong><code>col_name</code></strong>=<em><code>'area'</code></em>)</p>
+</blockquote>
+<p>Calc the integral of the curve and adds it to a new column.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="normalize" class="doc_header"><code>normalize</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L47" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>normalize</code>(<strong><code>df</code></strong>, <strong><code>bands</code></strong>=<em><code>None</code></em>, <strong><code>inplace</code></strong>=<em><code>False</code></em>)</p>
+</blockquote>
+<p>Normalize the reflectance spectra by dividing all reflectance values by the area under the curve. All normalized spectra will have area=1.</p>
 
 </div>
 
@@ -96,7 +194,7 @@ description: "This notebook has the Core functions for the Water Classification 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="showfig" class="doc_header"><code>showfig</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L32" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>showfig</code>(<strong><code>fig</code></strong>, <strong><code>buttonsToRemove</code></strong>=<em><code>[]</code></em>)</p>
+<h4 id="showfig" class="doc_header"><code>showfig</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L57" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>showfig</code>(<strong><code>fig</code></strong>, <strong><code>buttonsToRemove</code></strong>=<em><code>[]</code></em>)</p>
 </blockquote>
 <p>Converts a plotly figure into a HTML graph and displays it. That is necessary to maintain the interactive functionality of plotly in the jekyll documentation, on Github.</p>
 
@@ -121,7 +219,7 @@ description: "This notebook has the Core functions for the Water Classification 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="log_color_scatter" class="doc_header"><code>log_color_scatter</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L47" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>log_color_scatter</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
+<h4 id="log_color_scatter" class="doc_header"><code>log_color_scatter</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L72" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>log_color_scatter</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwargs</code></strong>)</p>
 </blockquote>
 <p>Proxy for px.scatter applying log to the color scale.</p>
 
@@ -153,9 +251,66 @@ description: "This notebook has the Core functions for the Water Classification 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="series_to_annotation" class="doc_header"><code>series_to_annotation</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L63" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>series_to_annotation</code>(<strong><code>s</code></strong>)</p>
+<h4 id="series_to_annotation" class="doc_header"><code>series_to_annotation</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L88" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>series_to_annotation</code>(<strong><code>s</code></strong>)</p>
 </blockquote>
 <p>create a formatted annotation string given the series</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="cluster_and_plot_scatter" class="doc_header"><code>cluster_and_plot_scatter</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L99" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>cluster_and_plot_scatter</code>(<strong><code>df</code></strong>, <strong><code>bands</code></strong>, <strong><code>clusters</code></strong>, <strong><code>x</code></strong>, <strong><code>y</code></strong>, <strong><code>color</code></strong>, <strong><code>continuous</code></strong>=<em><code>True</code></em>, <strong><code>hover_name</code></strong>=<em><code>None</code></em>, <strong><code>labels</code></strong>=<em><code>None</code></em>, <strong><code>title</code></strong>=<em><code>'cluster'</code></em>, <strong><code>log_y</code></strong>=<em><code>False</code></em>, <strong><code>height</code></strong>=<em><code>300</code></em>, <strong><code>marker_size</code></strong>=<em><code>4</code></em>)</p>
+</blockquote>
+<p>Do the clustering and plot a scatter with the informed axes.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="multi_cluster_and_plot" class="doc_header"><code>multi_cluster_and_plot</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L115" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>multi_cluster_and_plot</code>(<strong><code>dfs</code></strong>, <strong><code>bands</code></strong>, <strong><code>clusters_range</code></strong>, <strong><code>x</code></strong>, <strong><code>y</code></strong>, <strong><code>color</code></strong>, <strong><code>continuous</code></strong>=<em><code>True</code></em>, <strong><code>hover_name</code></strong>=<em><code>None</code></em>, <strong><code>labels</code></strong>=<em><code>None</code></em>, <strong><code>title</code></strong>=<em><code>'cluster'</code></em>, <strong><code>log_y</code></strong>=<em><code>False</code></em>, <strong><code>log_x</code></strong>=<em><code>False</code></em>, <strong><code>height</code></strong>=<em><code>300</code></em>, <strong><code>marker_size</code></strong>=<em><code>4</code></em>, <strong><code>dfs_names</code></strong>=<em><code>None</code></em>)</p>
+</blockquote>
+<p>Creates a grid of len(dfs) rows and len(clusters_range) columns to compare different clustering results</p>
 
 </div>
 
@@ -191,7 +346,7 @@ description: "This notebook has the Core functions for the Water Classification 
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="PCA_decomposition" class="doc_header"><code>PCA_decomposition</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L72" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>PCA_decomposition</code>(<strong><code>df</code></strong>, <strong><code>calc_bands</code></strong>, <strong><code>inf_bands</code></strong>=<em><code>None</code></em>, <strong><code>n_components</code></strong>=<em><code>2</code></em>)</p>
+<h4 id="PCA_decomposition" class="doc_header"><code>PCA_decomposition</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L153" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>PCA_decomposition</code>(<strong><code>df</code></strong>, <strong><code>calc_bands</code></strong>, <strong><code>inf_bands</code></strong>=<em><code>None</code></em>, <strong><code>n_components</code></strong>=<em><code>2</code></em>)</p>
 </blockquote>
 <p>Applies PCA decomposition in Dataframe df, using the bands specified in calc_bands.
 Inf_bands will be returned. If None is specified, the full dataframe with PCA columns will be returned</p>
@@ -217,7 +372,7 @@ Inf_bands will be returned. If None is specified, the full dataframe with PCA co
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="clusterize" class="doc_header"><code>clusterize</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L89" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>clusterize</code>(<strong><code>df</code></strong>, <strong><code>calc_bands</code></strong>, <strong><code>inf_bands</code></strong>=<em><code>None</code></em>, <strong><code>n_clusters</code></strong>=<em><code>2</code></em>)</p>
+<h4 id="clusterize" class="doc_header"><code>clusterize</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L170" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>clusterize</code>(<strong><code>df</code></strong>, <strong><code>calc_bands</code></strong>, <strong><code>inf_bands</code></strong>=<em><code>None</code></em>, <strong><code>n_clusters</code></strong>=<em><code>2</code></em>)</p>
 </blockquote>
 
 </div>
@@ -254,7 +409,7 @@ Inf_bands will be returned. If None is specified, the full dataframe with PCA co
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="calc_df_grouped_stats" class="doc_header"><code>calc_df_grouped_stats</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L108" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calc_df_grouped_stats</code>(<strong><code>df</code></strong>, <strong><code>groupby</code></strong>, <strong><code>variables</code></strong>, <strong><code>nameslist</code></strong>, <strong><code>funcslist</code></strong>)</p>
+<h4 id="calc_df_grouped_stats" class="doc_header"><code>calc_df_grouped_stats</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L189" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calc_df_grouped_stats</code>(<strong><code>df</code></strong>, <strong><code>groupby</code></strong>, <strong><code>variables</code></strong>, <strong><code>nameslist</code></strong>, <strong><code>funcslist</code></strong>)</p>
 </blockquote>
 <p>Calculate the statistics of a dataframe, grouped by a field, given a list of variables and aggregate 
 functions</p>
@@ -293,7 +448,7 @@ functions</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="nir_red_ratio" class="doc_header"><code>nir_red_ratio</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L128" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>nir_red_ratio</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>)</p>
+<h4 id="nir_red_ratio" class="doc_header"><code>nir_red_ratio</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L209" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>nir_red_ratio</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -317,7 +472,7 @@ functions</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="linear" class="doc_header"><code>linear</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L131" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>linear</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>)</p>
+<h4 id="linear" class="doc_header"><code>linear</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L212" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>linear</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -341,7 +496,7 @@ functions</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="expo" class="doc_header"><code>expo</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L134" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>expo</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>)</p>
+<h4 id="expo" class="doc_header"><code>expo</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L215" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>expo</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -365,7 +520,7 @@ functions</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="power" class="doc_header"><code>power</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L137" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>power</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>)</p>
+<h4 id="power" class="doc_header"><code>power</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L218" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>power</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -389,7 +544,7 @@ functions</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="poly" class="doc_header"><code>poly</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L141" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>poly</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>, <strong><code>c</code></strong>, <strong><code>d</code></strong>)</p>
+<h4 id="poly" class="doc_header"><code>poly</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L222" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>poly</code>(<strong><code>x</code></strong>, <strong><code>a</code></strong>, <strong><code>b</code></strong>, <strong><code>c</code></strong>, <strong><code>d</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -413,62 +568,7 @@ functions</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="nechad" class="doc_header"><code>nechad</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L144" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>nechad</code>(<strong><code>red</code></strong>, <strong><code>a</code></strong>=<em><code>610.94</code></em>, <strong><code>c</code></strong>=<em><code>0.2324</code></em>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="fit_curve" class="doc_header"><code>fit_curve</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L151" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fit_curve</code>(<strong><code>func</code></strong>, <strong><code>X</code></strong>, <strong><code>y</code></strong>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="calc_errors" class="doc_header"><code>calc_errors</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L157" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calc_errors</code>(<strong><code>X</code></strong>, <strong><code>y</code></strong>, <strong><code>func</code></strong>, <strong><code>params</code></strong>=<em><code>[]</code></em>)</p>
+<h4 id="nechad" class="doc_header"><code>nechad</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L225" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>nechad</code>(<strong><code>red</code></strong>, <strong><code>a</code></strong>=<em><code>610.94</code></em>, <strong><code>c</code></strong>=<em><code>0.2324</code></em>)</p>
 </blockquote>
 
 </div>
@@ -499,7 +599,7 @@ functions</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="plot_data_and_curve" class="doc_header"><code>plot_data_and_curve</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L168" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_data_and_curve</code>(<strong><code>df</code></strong>, <strong><code>X</code></strong>, <strong><code>y</code></strong>, <strong><code>color</code></strong>, <strong><code>hover_name</code></strong>, <strong><code>hover_data</code></strong>, <strong><code>xlabel</code></strong>, <strong><code>func</code></strong>, <strong><code>params</code></strong>=<em><code>[]</code></em>, <strong><code>title</code></strong>=<em><code>''</code></em>, <strong><code>height</code></strong>=<em><code>600</code></em>)</p>
+<h4 id="fit_curve" class="doc_header"><code>fit_curve</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L232" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fit_curve</code>(<strong><code>func</code></strong>, <strong><code>X</code></strong>, <strong><code>y</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -523,7 +623,62 @@ functions</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="fit_and_plot_curve" class="doc_header"><code>fit_and_plot_curve</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L198" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fit_and_plot_curve</code>(<strong><code>df</code></strong>, <strong><code>X</code></strong>, <strong><code>y</code></strong>, <strong><code>color</code></strong>, <strong><code>hover_name</code></strong>, <strong><code>hover_data</code></strong>, <strong><code>xlabel</code></strong>, <strong><code>func</code></strong>, <strong><code>height</code></strong>=<em><code>600</code></em>)</p>
+<h4 id="calc_errors" class="doc_header"><code>calc_errors</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L238" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calc_errors</code>(<strong><code>X</code></strong>, <strong><code>y</code></strong>, <strong><code>func</code></strong>, <strong><code>params</code></strong>=<em><code>[]</code></em>, <strong><code>decimal</code></strong>=<em><code>2</code></em>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="plot_data_and_curve" class="doc_header"><code>plot_data_and_curve</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L249" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>plot_data_and_curve</code>(<strong><code>df</code></strong>, <strong><code>X</code></strong>, <strong><code>y</code></strong>, <strong><code>color</code></strong>, <strong><code>hover_name</code></strong>, <strong><code>hover_data</code></strong>, <strong><code>xlabel</code></strong>, <strong><code>func</code></strong>, <strong><code>params</code></strong>=<em><code>[]</code></em>, <strong><code>title</code></strong>=<em><code>''</code></em>, <strong><code>height</code></strong>=<em><code>600</code></em>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="fit_and_plot_curve" class="doc_header"><code>fit_and_plot_curve</code><a href="https://github.com/cordmaur/WaterClassification/tree/master/WaterClassification/core.py#L279" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>fit_and_plot_curve</code>(<strong><code>df</code></strong>, <strong><code>X</code></strong>, <strong><code>y</code></strong>, <strong><code>color</code></strong>, <strong><code>hover_name</code></strong>, <strong><code>hover_data</code></strong>, <strong><code>xlabel</code></strong>, <strong><code>func</code></strong>, <strong><code>height</code></strong>=<em><code>600</code></em>)</p>
 </blockquote>
 
 </div>
