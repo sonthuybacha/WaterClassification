@@ -3,7 +3,6 @@
 __all__ = ['Fit', 'DfFit', 'MultiFit', 'GroupFit']
 
 # Cell
-
 import io
 import numpy as np
 import matplotlib
@@ -25,7 +24,7 @@ from WaterClassification import cleaning
 
 from scipy.optimize import curve_fit
 
-from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.metrics import r2_score, mean_squared_error, mean_squared_log_error
 
 import math
 
@@ -45,7 +44,7 @@ class Fit:
 
     available_funcs = ['linear', 'expo', 'power', 'nechad']
 
-    def __init__(self, func, X, y, metrics=['r2', 'rmse', 'SSE']):
+    def __init__(self, func, X, y, metrics=['r2', 'rmse', 'rmsle', 'SSE']):
         "Fits a model (function) to a set of data (X, y). Return the parameters and the errors as a dictionary."
 
         self.metrics = metrics
@@ -60,7 +59,7 @@ class Fit:
 
     #################################  FITTING METHODS  #################################
     @staticmethod
-    def test_fit(X, y, func, params=[], decimal=4, metrics=['r2', 'rmse', 'SSE']):
+    def test_fit(X, y, func, params=[], decimal=4, metrics=['r2', 'rmse', 'rmsle', 'SSE']):
         "Compute the predictions, calculate the errors and return in a dictionary. If there is no func, assume X is already the y_hat"
         res = {}
 
@@ -70,7 +69,8 @@ class Fit:
         if 'rmse' in metrics: res.update({'rmse': round(math.sqrt(mean_squared_error(y, y_hat)), decimal)})
         if 'SSE' in metrics: res.update({'SSE': round(((y-y_hat)**2).sum(), decimal)})
 
-        if 'rmsle' in metrics: res.update({'rmsle': round(np.sqrt(np.mean(np.square(np.log1p(y) - np.log1p(y_hat)))))})
+        y_hat[y_hat<0] = 0
+        if 'rmsle' in metrics: res.update({'rmsle': np.sqrt(mean_squared_log_error(y, y_hat))})
 
         res.update({'func': Fit.func_name(func) if func is not None else None,
                     'params': params,
@@ -150,14 +150,14 @@ class Fit:
             return 'Empty fitting'
 
         s = f"{self.fit_params['func']} func | "
-        for key in ['r2', 'rmse', 'SSE', 'qty', 'params']:
+        for key in self.metrics+['qty', 'params']:
             s += f"{key}: {self.fit_params[key]} "
 
         return s
 
 # Cell
 class DfFit(Fit):
-    def __init__(self, df, func, expr_x, expr_y, metrics=['r2', 'rmse', 'SSE']):
+    def __init__(self, df, func, expr_x, expr_y, metrics=['r2', 'rmse', 'rmsle', 'SSE']):
         "Fits a function using the dataframe and expressions for X and for Y."
         X = DfFit.parse_expr_df(df, expr_x)
         y = DfFit.parse_expr_df(df, expr_y)
@@ -229,7 +229,7 @@ class MultiFit:
         self.lst_funcs = funcs
         self.expr_y = expr_y
 
-        self.results_vars = ['r2', 'rmse', 'SSE', 'params']
+        self.results_vars = ['r2', 'rmse', 'rmsle', 'SSE', 'params']
 
     #################################  FITTING METHODS  #################################
     def get_fit(self, func, band):
@@ -278,7 +278,7 @@ class MultiFit:
         fits = self.get_results_df()
 
         scores = fits.loc[(fits.index.levels[0], metric), :]
-        idx_name, band = MultiFit.get_best_score(scores)
+        idx_name, band = MultiFit.get_best_score(scores, criteria=criteria)
 
         res_df = fits.loc[idx_name[0][0], band[0]]
         return res_df.append(pd.Series({'band': band[0], 'func': idx_name[0][0], 'qty': len(self.df), 'ids': self.df['Id'].to_list()}))
@@ -343,6 +343,17 @@ class MultiFit:
 
         return pd.DataFrame.from_dict(results)
 
+    def get_results_transposed(self, results_vars=None):
+        results_vars = self.results_vars if results_vars is None else results_vars
+
+        results = {}
+        for fit in self.fits:
+            if fit.filled():
+                values = {var: fit.fit_params[var] for var in results_vars}
+                results.update({(fit.fit_params['func'], fit.fit_params['band']): values})
+
+        return pd.DataFrame(results).T
+
     def __repr__(self):
         s = f'Multifit class with {len(self.fits)} fits on variable ({self.expr_y}): df with {len(self.df)} rows, bands:{self.lst_expr_x} funcs{self.lst_funcs} '
         return s
@@ -381,7 +392,7 @@ class GroupFit:
         results = {}
 
         for group, fit in self.group_fits.items():
-            results.update({group: fit.get_best_fit()})
+            results.update({group: fit.get_best_fit(metric=self.metric, criteria=self.criteria)})
         return pd.DataFrame.from_dict(results, orient='index')
 
     @staticmethod
@@ -410,14 +421,14 @@ class GroupFit:
         "Adds the overall result (considering all points) to the results table."
         results = self.get_results()
         grouped_metric = self.calc_grouped_metric_()
-        return results.append(pd.Series({key: grouped_metric[key] for key in ['r2', 'rmse', 'SSE', 'qty', 'ids']}).rename('Overall'))
+        return results.append(pd.Series({key: grouped_metric[key] for key in ['r2', 'rmse', 'rmsle', 'SSE', 'qty', 'ids']}).rename('Overall'))
 
     def calc_grouped_metric_(self):
         "Calculates the metrics considering all the best fits in the group and return as a dictionary."
         preds = []
         targs = []
         for group_fit in self.group_fits.values():
-            fit = group_fit.get_best_fit_obj()
+            fit = group_fit.get_best_fit_obj(metric=self.metric, criteria=self.criteria)
             preds = preds + list(fit.fit_params['y_hat'])
             targs = targs + list(fit.fit_params['y'])
 

@@ -2,12 +2,14 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"save_obj": "00_core.ipynb",
+index = {"s2bands": "00_core.ipynb",
+         "save_obj": "00_core.ipynb",
          "load_obj": "00_core.ipynb",
          "wavelength_range": "00_core.ipynb",
          "calc_area": "00_core.ipynb",
          "normalize": "00_core.ipynb",
          "apply_subplot": "00_core.ipynb",
+         "fig_to_html": "00_core.ipynb",
          "showfig": "00_core.ipynb",
          "log_color_scatter": "00_core.ipynb",
          "series_to_annotation": "00_core.ipynb",

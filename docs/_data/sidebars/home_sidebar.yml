@@ -22,17 +22,17 @@ entries:
       title: Fitting Funcs
       url: /Fitting
     - output: web,pdf
-      title: Clustering Analysis
-      url: /Clustering_Analysis
+      title: Baseline
+      url: /Baseline
     - output: web,pdf
-      title: Clustering assessment
-      url: /Clustering_assessment-Copy1
+      title: Clustering Analysis
+      url: /Clustering_Analysis-1
+    - output: web,pdf
+      title: Clustering Analysis by K
+      url: /Clustering_Analysis-2
     - output: web,pdf
       title: Unnormalized spectra analysis
       url: /Unnormalized_analysis
-    - output: web,pdf
-      title: Normalized and Brightness spectra analysis
-      url: /Normalized_Bright_analysis
     - output: web,pdf
       title: Normalized spectra analysis
       url: /Normalized_analysis
@@ -54,6 +54,9 @@ entries:
     - output: web,pdf
       title: Clustering assessment 4
       url: /Clustering_assessment-norm
+    - output: web,pdf
+      title: Clustering assessment
+      url: /Clustering_assessment-Copy1
     - output: web,pdf
       title: Auto Encoder
       url: /10-AutoEncoder
